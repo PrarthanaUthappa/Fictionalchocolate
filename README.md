@@ -8,7 +8,6 @@ This project is a Chocolate Management System built using Django. It allows user
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies](#technologies)
-- [License](#license)
 
 ## Installation
 
@@ -31,5 +30,18 @@ Django==4.1
 python manage.py makemigrations
 python manage.py migrate
 
+## usage
 <!-- start  -->
 python manage.py runserver
+
+## features
+add new seasonal flavors
+update the ingredients
+add customer feedback
+view all the entries
+
+## technologies
+Python: 3.12.4
+Django: 4.1
+
+
