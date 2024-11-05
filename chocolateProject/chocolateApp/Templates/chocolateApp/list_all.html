@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all data</title>
+</head>
+<body>
+    <h1>All data</h1>
+    <h2>Available Flavors</h2>
+    <ul>
+        {% for flavor in flavors %}
+            <li>{{ flavor.Name }} - {{ flavor.Season }} - ${{ flavor.Price }}</li>
+        {% empty %}
+            <li>No flavors available.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Available Ingredients</h2>
+    <ul>
+        {% for ingredient in ingredients %}
+            <li>{{ ingredient.Name }} - Quantity: {{ ingredient.Quantity }} - Expiry: {{ ingredient.Expiry }}</li>
+        {% empty %}
+            <li>No ingredients available.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Customer Feedback</h2>
+    <ul>
+        {% for feedback in feedbacks %}
+            <li>Suggestion: {{ feedback.Flavor_suggestion }} - Allergy Concerns: {{ feedback.Allergy_concerns }}</li>
+        {% empty %}
+            <li>No feedback available.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'ind' %}">Back to home</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update ingredient</title>
+</head>
+<body>
+    <h1>Update the ingredient</h1>
+    <form method="POST">
+        {%csrf_token%}
+        <label for="Name" >Ingredient Name:</label>
+        <input type="text" name="Name" required><br>
+        <label for="Quantity" >Quantity:</label>
+        <input type="number" name="Quantity" required><br>
+        <label for="Expiry" >Expiry Date:</label>
+        <input type="date" name="Expiry" required><br>
+        <button type="submit">Add ingredient</button>
+    </form>
+    <a href="{% url 'ind' %}">Back </a>
+    
+</body>
+</html>

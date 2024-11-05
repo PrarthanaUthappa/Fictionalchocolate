@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fictional Chocolate House</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8e4d8; /* Soft background color */
+        }
+        h1 {
+            color: #4a2c2a; /* Darker color for the title */
+        }
+        a {
+            display: inline-block; /* Makes links appear as buttons */
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #e75b35; /* Button color */
+            border-radius: 5px;
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+        a:hover {
+            background-color: #c54f27; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the fictional chocolate house</h1>
+    <a href="{%url 'addflavor' %}">Add the Flavor</a>
+    <a href="{%url 'update_ing'%}">Update the ingredient</a>
+    <a href="{%url 'Customer_Feedback'%}">Submit the feedback/suggestions</a>
+    <a href="{% url 'list_all' %}">View All Entries</a><br>
+
+    <!-- <h2>Available Flavors</h2>
+    <ul>
+        {% for flavor in flavors %}
+            <li>{{ flavor.Name }} - {{ flavor.Season }} - ${{ flavor.Price }}</li>
+        {% empty %}
+            <li>No flavors available.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Available Ingredients</h2>
+    <ul>
+        {% for ingredient in ingredients %}
+            <li>{{ ingredient.Name }} - Quantity: {{ ingredient.Quantity }} - Expiry: {{ ingredient.Expiry }}</li>
+        {% empty %}
+            <li>No ingredients available.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Customer Feedback</h2>
+    <ul>
+        {% for feedback in feedbacks %}
+            <li>Suggestion: {{ feedback.Flavor_suggestion }} - Allergy Concerns: {{ feedback.Allergy_concerns }}</li>
+        {% empty %}
+            <li>No feedback available.</li>
+        {% endfor %}
+    </ul> -->
+</body>
+</html>

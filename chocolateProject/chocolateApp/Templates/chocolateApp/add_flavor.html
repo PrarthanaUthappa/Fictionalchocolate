@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Flavor</title>
+</head>
+<body>
+    <h1>Add a new flavor</h1>
+    <form method="POST" action="{% url 'addflavor' %}">
+        {% csrf_token %}
+        <label for="Name" >Flavor Name:</label>
+        <input type="text" name="Name" required><br>
+        <label for="Season" >Season:</label>
+        <input type="text" name="Season" required><br>
+        <label for="Price" >Price:</label>
+        <input type="number" step="0.01" name="Price" required><br>
+        <button type="submit">Add Flavor</button>
+    </form>
+    <a href="{% url 'ind' %}">Back </a>
+    
+</body>
+</html>

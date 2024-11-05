@@ -1,0 +1,2 @@
+Only Django and SQLite is used with no additional dependencies
+Django>=4.2,<5

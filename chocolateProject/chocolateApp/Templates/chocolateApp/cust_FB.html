@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <h1>Submit the feedback</h1>
+    <form method="POST">
+        {%csrf_token%}
+        <label for="Flavor_suggestion" >Flavor Suggestion:</label>
+       <textarea name="Flavor_suggestion" required></textarea><br>
+        <label for="Allergy_concerns" >Allergy concerns:</label>
+        <textarea name="Allergy_concerns" required></textarea><br>
+        <button type="submit">Submit Feedback</button>
+    </form>
+    <a href="{% url 'ind' %}">Back </a>
+    
+</body>
+</html>
